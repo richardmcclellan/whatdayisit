@@ -1,0 +1,2 @@
+# whatdayisit
+AISR Weekly Calendar
