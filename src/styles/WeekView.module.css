@@ -1,0 +1,135 @@
+/* Container for the entire calendar component */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 10px; /* Rounded corners for the entire calendar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Week view container */
+.weekView {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px; /* Limiting max-width for a better look */
+    background-color: #ffffff; /* White background for calendar */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures contents do not overflow */
+}
+
+/* Header row and day row styling */
+.headerRow, .day {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    border-bottom: 1px solid #ddd;
+    padding: 2px;
+    background-color: #e6f7ff; /* Light blue for the header and day rows */
+    align-items: center;
+}
+
+/* Header row styling */
+.headerRow {
+    font-weight: bold;
+    background-color: #b3e5fc; /* Slightly darker blue for headers */
+    border-bottom: 2px solid #00bcd4; /* Teal border for emphasis */
+}
+
+/* Individual cells within the header and day rows */
+.headerCell, .activityCell, .date {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Date and day number styling */
+.date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077cc; /* Blue color for date text */
+}
+
+.aisrDay {
+    font-size: 16px;
+    font-style: italic;
+    color: #787878;
+    padding-bottom: 5px;
+}
+
+/* Highlight for today */
+.today {
+    background-color: #ffeb3b; /* Yellow background to highlight today */
+}
+
+/* Buttons container styling */
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Individual button styling */
+.button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0070f3; /* Blue button background */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Form styling for adding children */
+.form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form input, .form select, .form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.form button {
+    background-color: #4caf50; /* Green button background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* Updated CSS for the delete button */
+.deleteButton {
+    /* margin-left: 10px; */
+    /* padding: 5px; */
+    border: none;
+    background: none; /* No background for a subtle look */
+    color: #ff4d4f; /* Light red for the "X" button to indicate delete */
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size for subtlety */
+    line-height: 1; /* Line height to keep the button compact */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.deleteButton:hover {
+    color: #d32f2f; /* Darker red on hover */
+}
